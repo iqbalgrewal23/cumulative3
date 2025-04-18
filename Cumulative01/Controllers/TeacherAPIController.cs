@@ -179,6 +179,19 @@ public int DeleteTeacher(int id)
     // Failure
     return 0;
 }
+/// <summary>
+/// Updates an existing Teacher in the database
+/// </summary>
+/// <param name="TeacherId">Primary key of the teacher to update</param>
+/// <param name="TeacherData">Teacher object with updated information</param>
+/// <example>
+/// PUT: api/TeacherAPI/UpdateTeacher/3
+/// BODY: { "TeacherFirstName": "John", "TeacherLastName": "Doe", "EmployeeID": "T123", "HireDate": "2021-09-01", "Salary": 60000 }
+/// </example>
+/// <returns>
+/// Nothing (void). Updates the teacher record in the database.
+/// </returns>
+
 [HttpPut("UpdateTeacher/{TeacherId}")]
 public void UpdateTeacher(int TeacherId, [FromBody] Teacher TeacherData)
 {
