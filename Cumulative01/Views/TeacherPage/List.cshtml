@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Cumulative01.Models.Teacher>
+
+
+<form action="">
+	<input type="text" name="SearchKey" />
+
+	<input type="submit" value="Search" />
+</form>
+@foreach (Teacher teacher in Model)
+{
+	<div><a href="/TeacherPage/Show/@teacher.TeacherId"> @teacher.TeacherFirstName @teacher.TeacherLastName </a></div>
+	<hr />
+}

@@ -1,0 +1,10 @@
+﻿@model Cumulative01.Models.Teacher
+
+<h1>@Model.TeacherFirstName @Model.TeacherLastName</h1>
+<a href="/TeacherPage/List">Back to List</a> 
+<a class="alert-warning" href="/TeacherPage/DeleteConfirm/@Model.TeacherId">Delete</a>
+<a href="/TeacherPage/Edit/@Model.TeacherId">Edit</a>
+
+<p><span style="font-style:italic">Hired On: @Model.HireDate.ToString("yyyy-M-d")</span></p>
+<p><span style="font-style:italic">Employee Number: @Model.EmployeeID</span></p>
+<p><span style="font-style:italic">Salary: $@Model.Salary</span></p>
